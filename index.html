@@ -12,43 +12,45 @@
     
 </head>
 <!-- <body class="bg-linear-to-r from-amber-100 to-lime-700"> -->
-    <body class="bg-sky-700">
-    <header class="font-mono text-lg font-bold">
+    <body class="bg-sky-700 font-mono">
+    <header class="font bg-gray-400 opacity-70 text-2xl text-white font-bold">
+        <nav class="flex items-center justify-between px-12 h-16 lg:gap-8 ">
+            <a href="Albert-Photoroom.png" class="text-3xl font-bold border-2 px-2 py-1">Albert</a>
+        <div class="dropdown-menu absolute -top-full left-0 max-lg:bg-gray-400 w-full flex flex-col gap-6 items-center py-2 lg:static lg:flex-row lg:justify-between">
+            <ul class="flex flex-col items-center gap-6 lg:flex-row lg:gap-8 ">
+                <li class="hover:text-orange-400">
+                    <a href="#home">
+                        Home
+                    </a>
+                </li>
+                <li class="hover:text-orange-400">
+                    <a href="#about">
+                    About
+                    </a>
+                </li>
+                <li  class="hover:text-orange-400">
+                    <a href="#experience">
+                        My Experience
+                    </a>
+                </li>
+            </ul>
 
-        <nav class="w-300 ms-30 mt-10 fixed">
-        <div class="flex flex-auto py-6 bg-gray-400 opacity-70 ">
-
-            <div class="w-30 flex-auto ps-40">
-                <a href="#home">
-                    <h1 class="font-bold text-2xl text-white">Home</h1>
+            <div class="flex flex-col items-center gap-6 lg:flex-row lg:gap-8">
+                <a href="https://github.com/Albert-2024" target="_blank">
+                    <i class="fa-brands fa-github hover:text-orange-400"></i>
                 </a>
-            </div>
-
-            <div class="w-30 flex-auto ps-10">
-            <a href="#about">
-                <h1 class="font-bold text-2xl text-white">About me</h1>
-            </a>
-            </div>
-
-            <div class="w-30 flex-auto ps-10">
-                <a href="#experience">
-                <h1 class="font-bold text-2xl text-white">My Experience</h1>
-                </a>
-            </div>
-
-            <div class="w-30 flex-auto ps-10">
-                <a href="https://github.com/Albert-2024">
-                    <i class="fa-brands fa-github font-bold text-2xl text-white"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/albert-devasia/">
-                    <i class="fa-brands fa-linkedin font-bold text-2xl text-white ps-30"></i>
-                </a>
-                
-            </div>
-            
+                <a href="https://www.linkedin.com/in/albert-devasia/" target="_blank">
+                    <i class="fa-brands fa-linkedin hover:text-orange-400"></i>
+                </a> 
+            </div>     
+        </div>
+        <div class="toggle-button lg:hidden">
+            <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
         </div>
         </nav>
-        <div id="home" class="font-mono font-thin text-8xl px-30 py-50 text-white">
+    </header>
+
+        <div id="home" class="font-thin text-8xl px-30 py-50 text-white">
             <div class="">
                 <p>
                     Hey,<br>
@@ -59,16 +61,8 @@
                     & Passionate Learner.
                 </p>
             </div>
-        </div>  
+        </div> 
 
-    </header>
-
-    <!-- <div class="container">
-        <div class="w-8 h-10 flex justify-center items-center rounded-full mb-2 mx-auto">
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-brands fa-linkedin"></i>
-        </div>
-    </div>  -->
     <div id="about" class="container-2 ps-30 text-justify font-mono">
         <div class="about-header bg-gray-600 text-white opacity-50 text-6xl mb-7 me-30">
 <h2>
@@ -129,5 +123,14 @@ My Experiences
 </div>
 <br><br>
 </footer>
+<script>
+    const toggleBtn = document.querySelector(".toggle-button");
+    const dropdown = document.querySelector(".dropdown-menu");
+
+    toggleBtn.addEventListener("click",()=>{
+        dropdown.classList.toggle("top-16")
+    })
+
+</script>
 </body>
 </html>
